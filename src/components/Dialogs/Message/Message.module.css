@@ -1,0 +1,10 @@
+
+.messageMain {
+    display: grid;
+    grid-template-areas:
+    "a b";
+
+
+    grid-template-columns: 6fr 6fr;
+    /*grid-gap: 10px;*/
+}

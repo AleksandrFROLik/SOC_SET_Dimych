@@ -1,0 +1,63 @@
+.nav{
+    grid-area: n;
+    background-color: blueviolet;
+    padding: 20px;
+}
+.item  a {
+    color: white;
+    text-decoration: none;
+}
+.item  a:hover {
+    color: gold;
+}
+
+.item  a.active {
+    color: yellow;
+}
+
+.friendsItem {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.friend1 img{
+
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+.friend2 img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.friend3 img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+
+}
+
+.friend1 img:focus{
+
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border-radius: 20px;
+
+}
+.friend2 img:focus{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border-radius: 20px;
+}
+
+.friend3 img:focus{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border-radius: 20px;
+}

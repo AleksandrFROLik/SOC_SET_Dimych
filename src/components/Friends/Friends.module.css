@@ -1,0 +1,18 @@
+
+.friendsItem {
+    grid-template-areas:
+    "a b c";
+
+    grid-template-rows:  4fr 4fr 4fr;
+
+}
+
+.friend1 {
+    grid-area: a;
+}
+.friend2 {
+    grid-area: d;
+}
+.friend3 {
+    grid-area: c;
+}
