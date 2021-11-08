@@ -3,6 +3,7 @@ import s from './Dialogs.module.css'
 import {DialogItem} from "./DialogsItem/DialogsItem";
 import {Message} from "./Message/Message";
 import {storeType} from "../../Redux/Redux";
+import {sendMessageAC, upDateNewMessageBodyAC,} from "../../Redux/DialogPageReducer";
 
 type DialogsType = {
     store: storeType
@@ -14,10 +15,12 @@ export const Dialogs: React.FC<DialogsType> = ({store}: DialogsType) => {
     let messagesElements = store._state.dialogsPage.messages.map(m => <Message message={m.message}/>)
     let newMessageBody = store._state.dialogsPage.newMessageBody
     let onSendMessageClick = () => {
-        store.dispatch({type:"SEND_MESSAGE",})
+        // store.dispatch({type:"SEND_MESSAGE",})
+        store.dispatch(sendMessageAC())
     }
     let onNewMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-        store.dispatch({type: "UPDATE_NEW_MESSAGE_BODY", body: e.currentTarget.value})
+        // store.dispatch({type: "UPDATE_NEW_MESSAGE_BODY", body: e.currentTarget.value})
+        store.dispatch(upDateNewMessageBodyAC(e.currentTarget.value))
     }
 
     return (

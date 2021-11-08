@@ -2,6 +2,7 @@ import React, {ChangeEvent} from "react";
 import s from './MyPosts.module.css';
 import {Post} from "./Post/Post";
 import {postsType, RootActionType} from "../../../Redux/Redux";
+import {AddPostAC, upDateNewPostTextAC} from "../../../Redux/ProfilePageReducer";
 
 
 type MyPostsType = {
@@ -17,12 +18,14 @@ export const MyPosts = ({posts, newPostText, dispatch}:MyPostsType) => {
     const onPostChange = (e:ChangeEvent<HTMLTextAreaElement>) => {
         let text = e.currentTarget.value
         if(text) {
-            dispatch({type:"UPDATE-NEW-POST-TEXT", newText: text});
+            // dispatch({type:"UPDATE-NEW-POST-TEXT", newText: text});
+            dispatch(upDateNewPostTextAC(text));
         }
     }
 
     const addPost = ()=> {
-        dispatch({type:"ADD-POST", postText: newPostText})
+        // dispatch({type:"ADD-POST", postText: newPostText})
+        dispatch(AddPostAC(newPostText))
     }
 
     return (
